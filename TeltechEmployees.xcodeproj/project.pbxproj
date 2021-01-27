@@ -18,6 +18,7 @@
 		6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB45F25C06131000E668C /* EmployeeCardView.swift */; };
 		6D6BB46C25C06196000E668C /* EmployeeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */; };
 		6D6BB47725C06585000E668C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6BB47625C06585000E668C /* Networking.framework */; };
+		6D6BB41E25C0536F000E668C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6BB41D25C0536F000E668C /* Networking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D6BB41E25C0536F000E668C /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 				6D59271425C014DB00F18DB7 /* TeltechEmployeesTests */,
 				6D59271F25C014DB00F18DB7 /* TeltechEmployeesUITests */,
 				6D5926FC25C014DB00F18DB7 /* Products */,
+				6D6BB41C25C0536F000E668C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -412,6 +415,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -466,6 +470,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
