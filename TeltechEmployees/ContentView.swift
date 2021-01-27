@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            ZStack {
+                Color.white.edgesIgnoringSafeArea(.all)
+            }
+            .navigationBarTitle("Hello", displayMode: .inline)
+            
+        }
     }
 }
 
