@@ -12,7 +12,9 @@ import Foundation
  
     - Tag: Employee
  */
-public struct Employee: Codable {
+public struct Employee: Codable, Identifiable {
+    public var id: UUID = UUID()
+    
     public var department: String
     public var name: String
     public var surname: String

@@ -13,21 +13,24 @@ struct EmployeeCardView: View {
     
     @ObservedObject var viewModel: EmployeeCardViewModel
     
-    init(with employee: Employee) {
+    @State var cardWidth: CGFloat
+    
+    init(with employee: Employee, width: CGFloat) {
         viewModel = EmployeeCardViewModel(with: employee)
+        _cardWidth = State(initialValue: width)
     }
     
     var body: some View {
         VStack(alignment: .center) {
             //TODO: Lazy load image from API
-            Image(systemName: "")
+            Image(systemName: "person.circle.fill")
                 .resizable()
                 .frame(width: 128, height: 128, alignment: .center)
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(Color("backgroundAccent"))
                 .background(Color("backgroundImage"))
+                .foregroundColor(Color("backgroundAccent"))
                 .clipShape(Circle())
-                .clipped()
+                .overlay(Circle().stroke(Color("backgroundImage"), lineWidth: 4))
             VStack {
                 Text($viewModel.name.wrappedValue)
                     .foregroundColor(Color("text"))
@@ -39,25 +42,14 @@ struct EmployeeCardView: View {
                     .foregroundColor(Color("text"))
                     .padding(.top, 16)
             }
-            .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+            .padding(.top, 16)
+            .padding(.bottom, 16)
         }
-        .padding(EdgeInsets(top: 16, leading: 16, bottom: 16, trailing: 16))
+        .frame(width: cardWidth)
+        .padding(.top, 16)
+        .padding(.bottom, 16)
         .background(Color("backgroundAccent"))
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .clipped()
-    }
-}
-
-struct EmployeeListItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        let jsonString = "{\"department\":\"executive team\",\"name\":\"Patrick\",\"surname\":\"Falzon\",\"image\":\"patrick\",\"title\":\"General Manager\",\"agency\":\"\",\"intro\":\"Hello, I'm Patrick.\",\"description\":\"As General Manager, my role is made easy by the rest of the amazing team here at Teltech, where our goal is to deliver forward-thinking and user-friendly mobile solutions that focus on security, practicality and innovation. In my free time, I enjoy travel, reading and long walks on the beach (with my dog, of course).\"}"
-        
-        let decoder = JSONDecoder()
-        
-        let data = jsonString.data(using: .utf8)!
-        let employee = try! decoder.decode(Employee.self, from: data)
-        
-        return EmployeeCardView(with: employee)
-            .preferredColorScheme(.dark)
     }
 }
