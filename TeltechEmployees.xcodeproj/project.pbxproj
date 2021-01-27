@@ -20,7 +20,8 @@
 		6D6066A225C1E3CF00D7074E /* EmployeeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */; };
 		6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB45F25C06131000E668C /* EmployeeCardView.swift */; };
 		6D6BB46C25C06196000E668C /* EmployeeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */; };
-		6DB6575225C1F04A00DD217E /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB6575125C1F04A00DD217E /* Networking.framework */; };
+		6DB6575A25C1F13900DD217E /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB6575125C1F04A00DD217E /* Networking.framework */; };
+		6DB6575B25C1F13900DD217E /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB6575125C1F04A00DD217E /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,20 @@
 			remoteInfo = TeltechEmployees;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DB6575C25C1F13900DD217E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6DB6575B25C1F13900DD217E /* Networking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D5926FB25C014DB00F18DB7 /* TeltechEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB6575225C1F04A00DD217E /* Networking.framework in Frameworks */,
+				6DB6575A25C1F13900DD217E /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +204,7 @@
 				6D5926F725C014DB00F18DB7 /* Sources */,
 				6D5926F825C014DB00F18DB7 /* Frameworks */,
 				6D5926F925C014DB00F18DB7 /* Resources */,
+				6DB6575C25C1F13900DD217E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
