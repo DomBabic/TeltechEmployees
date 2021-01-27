@@ -18,10 +18,9 @@
 		6D60668F25C1434B00D7074E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60668E25C1434B00D7074E /* HomeViewModel.swift */; };
 		6D60669D25C1E36000D7074E /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60669C25C1E36000D7074E /* ErrorView.swift */; };
 		6D6066A225C1E3CF00D7074E /* EmployeeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */; };
-		6D6BB41E25C0536F000E668C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6BB41D25C0536F000E668C /* Networking.framework */; };
 		6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB45F25C06131000E668C /* EmployeeCardView.swift */; };
 		6D6BB46C25C06196000E668C /* EmployeeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */; };
-		6D6BB47725C06585000E668C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6BB47625C06585000E668C /* Networking.framework */; };
+		6DB6575225C1F04A00DD217E /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB6575125C1F04A00DD217E /* Networking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +58,9 @@
 		6D60668E25C1434B00D7074E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		6D60669C25C1E36000D7074E /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCarousel.swift; sourceTree = "<group>"; };
-		6D6BB41D25C0536F000E668C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6BB45F25C06131000E668C /* EmployeeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardView.swift; sourceTree = "<group>"; };
 		6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardViewModel.swift; sourceTree = "<group>"; };
-		6D6BB47625C06585000E668C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D6BB47825C0659F000E668C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DB6575125C1F04A00DD217E /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6BB47725C06585000E668C /* Networking.framework in Frameworks */,
+				6DB6575225C1F04A00DD217E /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D6BB41E25C0536F000E668C /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +154,7 @@
 		6D6BB41C25C0536F000E668C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D6BB47825C0659F000E668C /* Networking.framework */,
-				6D6BB47625C06585000E668C /* Networking.framework */,
-				6D6BB41D25C0536F000E668C /* Networking.framework */,
+				6DB6575125C1F04A00DD217E /* Networking.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
