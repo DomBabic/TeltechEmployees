@@ -12,6 +12,8 @@ import Networking
 struct EmployeeCarousel: View {
     var items: [Employee]
     
+    @ObservedObject var coordinator = AppCoordinator.shared
+    
     @State var currentIndex: Int = 0
     @State var width: CGFloat = UIScreen.main.bounds.width
     @State var cardWidth: CGFloat = UIScreen.main.bounds.width - 32

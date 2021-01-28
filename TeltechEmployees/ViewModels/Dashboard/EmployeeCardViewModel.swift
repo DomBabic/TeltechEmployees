@@ -16,6 +16,7 @@ class EmployeeCardViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var title: String = ""
     @Published var intro: String = ""
+    @Published var description: String = ""
     
     init(with employee: Employee) {
         self.employee = employee
@@ -23,5 +24,6 @@ class EmployeeCardViewModel: ObservableObject {
         name = employee.name + " " + employee.surname
         title = employee.title
         intro = employee.intro
+        description = employee.description
     }
 }

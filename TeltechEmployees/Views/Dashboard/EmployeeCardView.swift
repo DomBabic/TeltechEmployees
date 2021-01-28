@@ -11,6 +11,7 @@ import Networking
 
 struct EmployeeCardView: View {
     
+    @ObservedObject var coordinator = AppCoordinator.shared
     @ObservedObject var viewModel: EmployeeCardViewModel
     
     @State var cardWidth: CGFloat
@@ -44,6 +45,13 @@ struct EmployeeCardView: View {
             }
             .padding(.top, 16)
             .padding(.bottom, 16)
+            
+            NavigationLink(
+                destination: coordinator.scene(for: .home(route: .detail(employee: viewModel.employee))),
+                label: {
+                    Text("See more")
+                        .foregroundColor(Color("textAccent"))
+                })
         }
         .frame(width: cardWidth)
         .padding(.top, 16)
