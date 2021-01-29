@@ -13,7 +13,6 @@
 		6D59270525C014DB00F18DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270425C014DB00F18DB7 /* Assets.xcassets */; };
 		6D59270825C014DB00F18DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270725C014DB00F18DB7 /* Preview Assets.xcassets */; };
 		6D59270B25C014DB00F18DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270925C014DB00F18DB7 /* LaunchScreen.storyboard */; };
-		6D59271625C014DB00F18DB7 /* TeltechEmployeesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59271525C014DB00F18DB7 /* TeltechEmployeesTests.swift */; };
 		6D59272125C014DB00F18DB7 /* TeltechEmployeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59272025C014DB00F18DB7 /* TeltechEmployeesUITests.swift */; };
 		6D60668A25C1432200D7074E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60668925C1432200D7074E /* HomeView.swift */; };
 		6D60668F25C1434B00D7074E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60668E25C1434B00D7074E /* HomeViewModel.swift */; };
@@ -72,7 +71,6 @@
 		6D59270A25C014DB00F18DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D59270C25C014DB00F18DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D59271125C014DB00F18DB7 /* TeltechEmployeesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechEmployeesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D59271525C014DB00F18DB7 /* TeltechEmployeesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechEmployeesTests.swift; sourceTree = "<group>"; };
 		6D59271725C014DB00F18DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D59271C25C014DB00F18DB7 /* TeltechEmployeesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechEmployeesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D59272025C014DB00F18DB7 /* TeltechEmployeesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeltechEmployeesUITests.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		6D59271425C014DB00F18DB7 /* TeltechEmployeesTests */ = {
 			isa = PBXGroup;
 			children = (
-				6D59271525C014DB00F18DB7 /* TeltechEmployeesTests.swift */,
 				6D59271725C014DB00F18DB7 /* Info.plist */,
 			);
 			path = TeltechEmployeesTests;
@@ -342,6 +339,7 @@
 					};
 					6D59271025C014DB00F18DB7 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 6D5926FA25C014DB00F18DB7;
 					};
 					6D59271B25C014DB00F18DB7 = {
@@ -424,7 +422,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D59271625C014DB00F18DB7 /* TeltechEmployeesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +627,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5F4T8BUBL;
 				INFOPLIST_FILE = TeltechEmployeesTests/Info.plist;
@@ -641,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HeliOs.TeltechEmployeesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeltechEmployees.app/TeltechEmployees";
@@ -652,6 +651,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W5F4T8BUBL;
 				INFOPLIST_FILE = TeltechEmployeesTests/Info.plist;
