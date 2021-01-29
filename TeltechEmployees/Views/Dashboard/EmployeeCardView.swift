@@ -23,7 +23,6 @@ struct EmployeeCardView: View {
     
     var body: some View {
         VStack(alignment: .center) {
-            //TODO: Lazy load image from API
             Image(uiImage: $viewModel.image.wrappedValue)
                 .resizable()
                 .frame(width: 128, height: 128, alignment: .center)

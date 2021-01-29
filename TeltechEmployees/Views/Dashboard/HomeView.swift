@@ -18,8 +18,10 @@ struct HomeView: View {
         VStack {
             if !$viewModel.employees.wrappedValue.isEmpty {
                 EmployeeCarousel(items: $viewModel.employees.wrappedValue)
-            } else {
+            } else if $viewModel.errorOccurred.wrappedValue {
                 ErrorView(action: retry)
+            } else {
+                LoadingView()
             }
         }
         .background(Color("background").edgesIgnoringSafeArea(.vertical))

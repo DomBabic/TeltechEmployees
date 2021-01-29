@@ -21,6 +21,7 @@
 		6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB45F25C06131000E668C /* EmployeeCardView.swift */; };
 		6D6BB46C25C06196000E668C /* EmployeeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */; };
 		6DAA5C7A25C2F5C1008CA235 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */; };
+		6DAA5C8A25C4085D008CA235 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA5C8925C4085D008CA235 /* LoadingView.swift */; };
 		6DB2990F25C2C6CA00B71474 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2990E25C2C6CA00B71474 /* AppCoordinator.swift */; };
 		6DB2991B25C2D76D00B71474 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2991A25C2D76D00B71474 /* LoginView.swift */; };
 		6DB2992325C2DBD700B71474 /* AccentedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2992225C2DBD700B71474 /* AccentedTextFieldStyle.swift */; };
@@ -81,6 +82,7 @@
 		6D6BB45F25C06131000E668C /* EmployeeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardView.swift; sourceTree = "<group>"; };
 		6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardViewModel.swift; sourceTree = "<group>"; };
 		6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
+		6DAA5C8925C4085D008CA235 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6DB2990E25C2C6CA00B71474 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		6DB2991A25C2D76D00B71474 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6DB2992225C2DBD700B71474 /* AccentedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentedTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */,
 				6D60669C25C1E36000D7074E /* ErrorView.swift */,
 				6D60668925C1432200D7074E /* HomeView.swift */,
+				6DAA5C8925C4085D008CA235 /* LoadingView.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */,
 				6D5926FF25C014DB00F18DB7 /* AppDelegate.swift in Sources */,
 				6DB2992E25C2DFCE00B71474 /* AppRootView.swift in Sources */,
+				6DAA5C8A25C4085D008CA235 /* LoadingView.swift in Sources */,
 				6D59270125C014DB00F18DB7 /* SceneDelegate.swift in Sources */,
 				6D60669D25C1E36000D7074E /* ErrorView.swift in Sources */,
 				6DAA5C7A25C2F5C1008CA235 /* EmployeeDetailView.swift in Sources */,

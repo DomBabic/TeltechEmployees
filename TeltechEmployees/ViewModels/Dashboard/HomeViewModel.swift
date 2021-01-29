@@ -11,7 +11,7 @@ import Networking
 
 class HomeViewModel: ObservableObject {
     
-    lazy var publisher = RequestManager.shared.employeePublisher()
+    var requestManager = RequestManager.shared
     
     var cancellable: Set<AnyCancellable> = []
     
@@ -23,6 +23,10 @@ class HomeViewModel: ObservableObject {
     }
     
     func fetchData() {
+        errorOccurred = false
+        
+        let publisher = requestManager.employeePublisher()
+        
         publisher.sink(receiveCompletion: { [weak self] completion in
             switch completion {
             case .finished:
