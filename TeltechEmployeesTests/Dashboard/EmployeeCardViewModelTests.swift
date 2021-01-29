@@ -10,7 +10,7 @@ import Combine
 @testable import Networking
 @testable import TeltechEmployees
 
-class RequestManagerStub: RequestManager {
+fileprivate class RequestManagerStub: RequestManager {
     override func imagePublisher(for imageName: String) -> AnyPublisher<UIImage?, Error> {
         return AnyPublisher(Result<UIImage?, Error>.Publisher(UIImage()))
     }
