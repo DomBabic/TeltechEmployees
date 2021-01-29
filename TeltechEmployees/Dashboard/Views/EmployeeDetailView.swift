@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Networking
+import Analytics
 
 struct EmployeeDetailView: View {
     
@@ -75,7 +76,9 @@ struct EmployeeDetailView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
-        
+        .onAppear {
+            EventTracker.shared.trackEvent("accessed_detail", parameters: ["employee": viewModel.name])
+        }
     }
     
     @ViewBuilder func buildImageView(isLoading: Bool) -> some View {

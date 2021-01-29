@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6D076E2E25C46C80008CB86A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D076E3025C46C80008CB86A /* Localizable.strings */; };
+		6D076E7425C47B6C008CB86A /* Analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D076E7325C47B6C008CB86A /* Analytics.framework */; };
+		6D076E7525C47B6C008CB86A /* Analytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D076E7325C47B6C008CB86A /* Analytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6D59080225C4285700CA4907 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59080125C4285700CA4907 /* LoadingView.swift */; };
 		6D5926FF25C014DB00F18DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */; };
 		6D59270125C014DB00F18DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59270025C014DB00F18DB7 /* SceneDelegate.swift */; };
@@ -57,6 +59,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				6DB6575B25C1F13900DD217E /* Networking.framework in Embed Frameworks */,
+				6D076E7525C47B6C008CB86A /* Analytics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 /* Begin PBXFileReference section */
 		6D076E2F25C46C80008CB86A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D076E3325C46C88008CB86A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D076E7325C47B6C008CB86A /* Analytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Analytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D59080125C4285700CA4907 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6D5926FB25C014DB00F18DB7 /* TeltechEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB6575A25C1F13900DD217E /* Networking.framework in Frameworks */,
+				6D076E7425C47B6C008CB86A /* Analytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +194,7 @@
 		6D6BB41C25C0536F000E668C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D076E7325C47B6C008CB86A /* Analytics.framework */,
 				6DB6575125C1F04A00DD217E /* Networking.framework */,
 			);
 			name = Frameworks;

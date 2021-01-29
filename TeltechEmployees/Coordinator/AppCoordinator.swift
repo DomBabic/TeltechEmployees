@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Networking
+import Analytics
 
 class AppCoordinator: ObservableObject {
     
@@ -42,6 +43,8 @@ class AppCoordinator: ObservableObject {
     }
     
     func loginUser() {
+        EventTracker.shared.trackEvent("login")
+        
         entryPoint = EntryPoint.home(route: .root)
     }
     

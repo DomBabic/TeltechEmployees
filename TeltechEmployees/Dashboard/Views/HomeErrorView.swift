@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Analytics
 
 struct HomeErrorView: View {
     
@@ -33,5 +34,8 @@ struct HomeErrorView: View {
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width)
+        .onAppear {
+            EventTracker.shared.trackEvent("data_loading_error")
+        }
     }
 }

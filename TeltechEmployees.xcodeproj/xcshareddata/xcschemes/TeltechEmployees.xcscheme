@@ -14,6 +14,34 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D076E4125C4785D008CB86A"
+               BuildableName = "Analytics.framework"
+               BlueprintName = "Analytics"
+               ReferencedContainer = "container:Analytics/Analytics.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D076E4A25C4785D008CB86A"
+               BuildableName = "AnalyticsTests.xctest"
+               BlueprintName = "AnalyticsTests"
+               ReferencedContainer = "container:Analytics/Analytics.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D6BB3F725C052C7000E668C"
                BuildableName = "Networking.framework"
                BlueprintName = "Networking"

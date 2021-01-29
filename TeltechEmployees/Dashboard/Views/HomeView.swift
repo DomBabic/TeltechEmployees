@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import Networking
+import Analytics
 
 struct HomeView: View {
     
@@ -28,6 +29,9 @@ struct HomeView: View {
         }
         .frame(width: bounds.width, height: bounds.height)
         .background(Color("background"))
+        .onAppear {
+            EventTracker.shared.trackEvent("accessed_home")
+        }
     }
     
     func retry() {

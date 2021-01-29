@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>74720673824-4bb781ok95hglsiilmam63sb05bnomuf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.74720673824-4bb781ok95hglsiilmam63sb05bnomuf</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBsxmWLMxzb9Q-tITnJBXk-MkVLPgTgqFQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>74720673824</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.HeliOs.TeltechEmployees</string>
+	<key>PROJECT_ID</key>
+	<string>teltechemployees</string>
+	<key>STORAGE_BUCKET</key>
+	<string>teltechemployees.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:74720673824:ios:3759d18c1597c6e2993c45</string>
+</dict>
+</plist>
