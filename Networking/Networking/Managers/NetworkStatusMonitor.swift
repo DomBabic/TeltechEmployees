@@ -15,17 +15,22 @@ import Network
  */
 public class NetworkStatusMonitor: ObservableObject {
     
+    ///Singleton instance of NetworkStatusMonitor.
     public static var shared = NetworkStatusMonitor()
     
-    private let monitor = NWPathMonitor()
+    ///NWPathMonitor which monitors changes to the network status.
+    public let monitor = NWPathMonitor()
+    
+    ///DispatchQueue on which monitoring is performed.
     private let monitoringQueue = DispatchQueue(label: "monitor", qos: DispatchQoS.background)
     
+    ///Boolean indicating whether or not network connection is established.
     @Published public var isOnline = true
     
     init() {
         monitor.pathUpdateHandler = { [unowned self] path in
             DispatchQueue.main.async {
-                self.isOnline = path.status == .satisfied || path.status == .requiresConnection
+                self.isOnline = path.status == .satisfied
             }
         }
         

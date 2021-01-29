@@ -30,6 +30,7 @@ struct AppRootView: View {
                     .opacity(!monitor.isOnline ? 1.0 : 0.0)
                     .padding(.top, 16)
                     .animation(.easeIn)
+                    .position(x: bounds.width * 0.5, y: bounds.height * 0.125)
             }
             .frame(width: bounds.width, height: bounds.height)
             .edgesIgnoringSafeArea(.vertical)

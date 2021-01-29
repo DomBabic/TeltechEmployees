@@ -99,5 +99,49 @@ class RequestManagerTests: XCTestCase {
         
         XCTAssertTrue(requestMade)
     }
+    
+    func testImagePublisher() {
+        var expectation = XCTestExpectation(description: "Result Expectation")
+        
+        var cancellable: Set<AnyCancellable> = []
+        var publisher = RequestManager.shared.imagePublisher(for: "-80")
+        
+        var requestMade = false
+        
+        publisher.sink(receiveCompletion: { completion in
+            requestMade = true
+            
+            expectation.fulfill()
+        }, receiveValue: { value in
+            
+        }).store(in: &cancellable)
+        
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertTrue(requestMade)
+        
+        expectation = XCTestExpectation(description: "Result Expectation")
+        requestMade = false
+        
+        let cache = ImageCacheManager.shared
+        
+        let image = UIImage()
+        
+        cache["-80"] = image
+        
+        publisher = RequestManager.shared.imagePublisher(for: "-80")
+        
+        publisher.sink(receiveCompletion: { completion in
+            requestMade = true
+            
+            expectation.fulfill()
+        }, receiveValue: { value in
+            XCTAssertEqual(value, image)
+        }).store(in: &cancellable)
+        
+        wait(for: [expectation], timeout: 5)
+        
+        XCTAssertTrue(requestMade)
+    }
 
 }

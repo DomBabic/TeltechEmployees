@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D59080E25C44D1C00CA4907 /* ImageCacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59080D25C44D1C00CA4907 /* ImageCacheManagerTests.swift */; };
+		6D59081225C44E9A00CA4907 /* NetworkStatusMonitorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59081125C44E9A00CA4907 /* NetworkStatusMonitorTests.swift */; };
 		6D6BB40225C052C7000E668C /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D6BB3F825C052C7000E668C /* Networking.framework */; };
 		6D6BB40925C052C7000E668C /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6BB3FB25C052C7000E668C /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D6BB42825C0541E000E668C /* URLSession+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB42725C0541E000E668C /* URLSession+Publisher.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D59080D25C44D1C00CA4907 /* ImageCacheManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManagerTests.swift; sourceTree = "<group>"; };
+		6D59081125C44E9A00CA4907 /* NetworkStatusMonitorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusMonitorTests.swift; sourceTree = "<group>"; };
 		6D6BB3F825C052C7000E668C /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D6BB3FB25C052C7000E668C /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		6D6BB3FC25C052C7000E668C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,7 +162,9 @@
 		6D6BB43625C05454000E668C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				6D59080D25C44D1C00CA4907 /* ImageCacheManagerTests.swift */,
 				6D6BB43925C0546C000E668C /* RequestManagerTests.swift */,
+				6D59081125C44E9A00CA4907 /* NetworkStatusMonitorTests.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -287,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D6BB43E25C05477000E668C /* EndpointTests.swift in Sources */,
+				6D59080E25C44D1C00CA4907 /* ImageCacheManagerTests.swift in Sources */,
 				6D6BB43A25C0546C000E668C /* RequestManagerTests.swift in Sources */,
+				6D59081225C44E9A00CA4907 /* NetworkStatusMonitorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

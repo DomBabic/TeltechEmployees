@@ -48,5 +48,15 @@ class EndpointTests: XCTestCase {
         
         XCTAssertEqual(url?.absoluteString, baseUrl + "/api?name=Matt&sort=name")
     }
+    
+    func testImageWithName() {
+        let endpoint = Endpoint.image(with: "matt")
+        
+        let url = endpoint.url
+        
+        XCTAssertNotNil(url)
+        
+        XCTAssertEqual(url?.absoluteString, baseUrl + "/images/members/matt-main.jpg")
+    }
 
 }
