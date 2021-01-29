@@ -20,6 +20,7 @@
 		6D6066A225C1E3CF00D7074E /* EmployeeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */; };
 		6D6BB46025C06131000E668C /* EmployeeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB45F25C06131000E668C /* EmployeeCardView.swift */; };
 		6D6BB46C25C06196000E668C /* EmployeeCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */; };
+		6DA7212E25C4625900308ECF /* EmployeeCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA7212D25C4625900308ECF /* EmployeeCardViewModelTests.swift */; };
 		6DAA5C7A25C2F5C1008CA235 /* EmployeeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */; };
 		6DAA5C8A25C4085D008CA235 /* HomeLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA5C8925C4085D008CA235 /* HomeLoadingView.swift */; };
 		6DB2990F25C2C6CA00B71474 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2990E25C2C6CA00B71474 /* AppCoordinator.swift */; };
@@ -81,6 +82,7 @@
 		6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCarousel.swift; sourceTree = "<group>"; };
 		6D6BB45F25C06131000E668C /* EmployeeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardView.swift; sourceTree = "<group>"; };
 		6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardViewModel.swift; sourceTree = "<group>"; };
+		6DA7212D25C4625900308ECF /* EmployeeCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCardViewModelTests.swift; sourceTree = "<group>"; };
 		6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailView.swift; sourceTree = "<group>"; };
 		6DAA5C8925C4085D008CA235 /* HomeLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLoadingView.swift; sourceTree = "<group>"; };
 		6DB2990E25C2C6CA00B71474 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -140,10 +142,11 @@
 		6D5926FD25C014DB00F18DB7 /* TeltechEmployees */ = {
 			isa = PBXGroup;
 			children = (
-				6DB2992025C2DBB500B71474 /* Styles */,
+				6DB2992C25C2DFC200B71474 /* AppRoot */,
 				6DB2990D25C2C6B700B71474 /* Coordinator */,
-				6D6BB46A25C06177000E668C /* ViewModels */,
-				6D6BB44325C05808000E668C /* Views */,
+				6DA7212925C461D400308ECF /* Dashboard */,
+				6DB2991825C2D73A00B71474 /* FTUE */,
+				6DB2992025C2DBB500B71474 /* Styles */,
 				6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */,
 				6D59270025C014DB00F18DB7 /* SceneDelegate.swift */,
 				6D59270425C014DB00F18DB7 /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 		6D59271425C014DB00F18DB7 /* TeltechEmployeesTests */ = {
 			isa = PBXGroup;
 			children = (
+				6DA7212C25C4623900308ECF /* Dashboard */,
 				6D59271725C014DB00F18DB7 /* Info.plist */,
 			);
 			path = TeltechEmployeesTests;
@@ -187,22 +191,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6D6BB44325C05808000E668C /* Views */ = {
+		6DA7212925C461D400308ECF /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				6DB2992C25C2DFC200B71474 /* AppRoot */,
-				6DB2991825C2D73A00B71474 /* FTUE */,
-				6DB2991925C2D75400B71474 /* Dashboard */,
+				6DA7212A25C461DB00308ECF /* ViewModels */,
+				6DA7212B25C4620600308ECF /* Views */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6DA7212A25C461DB00308ECF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */,
+				6D60668E25C1434B00D7074E /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6DA7212B25C4620600308ECF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D6BB45F25C06131000E668C /* EmployeeCardView.swift */,
+				6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */,
+				6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */,
+				6D60669C25C1E36000D7074E /* HomeErrorView.swift */,
+				6DAA5C8925C4085D008CA235 /* HomeLoadingView.swift */,
+				6D60668925C1432200D7074E /* HomeView.swift */,
+				6D59080125C4285700CA4907 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		6D6BB46A25C06177000E668C /* ViewModels */ = {
+		6DA7212C25C4623900308ECF /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				6DB2993125C2E41600B71474 /* Dashboard */,
+				6DA7212D25C4625900308ECF /* EmployeeCardViewModelTests.swift */,
 			);
-			path = ViewModels;
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		6DB2990D25C2C6B700B71474 /* Coordinator */ = {
@@ -219,20 +245,6 @@
 				6DB2991A25C2D76D00B71474 /* LoginView.swift */,
 			);
 			path = FTUE;
-			sourceTree = "<group>";
-		};
-		6DB2991925C2D75400B71474 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				6D6BB45F25C06131000E668C /* EmployeeCardView.swift */,
-				6D6066A125C1E3CF00D7074E /* EmployeeCarousel.swift */,
-				6DAA5C7925C2F5C1008CA235 /* EmployeeDetailView.swift */,
-				6D60669C25C1E36000D7074E /* HomeErrorView.swift */,
-				6DAA5C8925C4085D008CA235 /* HomeLoadingView.swift */,
-				6D60668925C1432200D7074E /* HomeView.swift */,
-				6D59080125C4285700CA4907 /* LoadingView.swift */,
-			);
-			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		6DB2992025C2DBB500B71474 /* Styles */ = {
@@ -257,15 +269,6 @@
 				6DB2992D25C2DFCE00B71474 /* AppRootView.swift */,
 			);
 			path = AppRoot;
-			sourceTree = "<group>";
-		};
-		6DB2993125C2E41600B71474 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				6D6BB46B25C06196000E668C /* EmployeeCardViewModel.swift */,
-				6D60668E25C1434B00D7074E /* HomeViewModel.swift */,
-			);
-			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DA7212E25C4625900308ECF /* EmployeeCardViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,6 +28,10 @@ class EmployeeCardViewModel: ObservableObject {
     init(with employee: Employee) {
         self.employee = employee
         
+        loadData()
+    }
+    
+    func loadData() {
         name = employee.name + " " + employee.surname
         title = employee.title
         intro = employee.intro
