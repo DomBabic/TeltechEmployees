@@ -18,9 +18,8 @@ struct AppRootView: View {
     @ViewBuilder
     var body: some View {
         NavigationView {
-            ZStack(alignment: .top) {
+            ZStack {
                 coordinator.scene(for: $coordinator.entryPoint.wrappedValue)
-                    .edgesIgnoringSafeArea(.all)
                 
                 Text("No network connection.")
                     .foregroundColor(Color.white)
@@ -32,8 +31,11 @@ struct AppRootView: View {
                     .padding(.top, 16)
                     .animation(.easeIn)
             }
+            .frame(width: bounds.width, height: bounds.height)
+            .edgesIgnoringSafeArea(.vertical)
+            .background(Color("background"))
         }
         .frame(width: bounds.width, height: bounds.height)
-        .edgesIgnoringSafeArea(.all)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

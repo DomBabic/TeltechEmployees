@@ -16,7 +16,7 @@ struct LoginView: View {
     @State var password: String = ""
     
     var body: some View {
-        VStack(spacing: 16) {
+        VStack {
             
             Spacer()
             
@@ -54,7 +54,7 @@ struct LoginView: View {
             
             Spacer()
         }
-        .frame(width: bounds.width, height: bounds.height)
+        .frame(width: bounds.width)
         .background(Color("background"))
     }
 }

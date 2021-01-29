@@ -14,6 +14,8 @@ struct EmployeeCarousel: View {
     
     @ObservedObject var coordinator = AppCoordinator.shared
     
+    @State var bounds = UIScreen.main.bounds
+    
     @State var currentIndex: Int = 0
     @State var width: CGFloat = UIScreen.main.bounds.width
     @State var cardWidth: CGFloat = UIScreen.main.bounds.width - 32
@@ -28,8 +30,6 @@ struct EmployeeCarousel: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            
             HStack(spacing: spacing) {
                 ForEach(items) { element in
                     EmployeeCardView(with: element, width: cardWidth)
@@ -58,8 +58,6 @@ struct EmployeeCarousel: View {
                             
                             xOffset = calculateOffset()
                         })
-            
-            Spacer()
         }
     }
     

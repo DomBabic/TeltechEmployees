@@ -13,19 +13,21 @@ struct HomeView: View {
     
     @ObservedObject var viewModel = HomeViewModel()
     
+    @State var bounds = UIScreen.main.bounds
+    
     @ViewBuilder
     var body : some View {
-        VStack {
+        VStack(alignment: .center) {
             if !$viewModel.employees.wrappedValue.isEmpty {
                 EmployeeCarousel(items: $viewModel.employees.wrappedValue)
             } else if $viewModel.errorOccurred.wrappedValue {
-                ErrorView(action: retry)
+                HomeErrorView(action: retry)
             } else {
-                LoadingView()
+                HomeLoadingView()
             }
         }
-        .background(Color("background").edgesIgnoringSafeArea(.vertical))
-        .animation(.spring())
+        .frame(width: bounds.width, height: bounds.height)
+        .background(Color("background"))
     }
     
     func retry() {

@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct LoadingView: View {
-    
-    @State var bounds = UIScreen.main.bounds
+struct LoadingView<Content: View>: View {
+    let content: Content
+    let gradient: Gradient
     
     @State var isAnimating = false
     
@@ -19,36 +19,30 @@ struct LoadingView: View {
             .repeatForever(autoreverses: false)
     }
     
+    init(gradient: Gradient, content: @escaping () -> Content) {
+        self.gradient = gradient
+        self.content = content()
+    }
+    
     var body: some View {
         VStack {
-            VStack(spacing: 8) {
-                Circle()
-                    .stroke(
-                        LinearGradient(gradient: Gradient(colors: [Color("backgroundAccent"),
-                                                                   Color("textAccent"),
-                                                                   Color("text")]),
-                                       startPoint: .top, endPoint: .bottom),
-                        style: StrokeStyle(
-                            lineWidth: 5,
-                            lineCap: .round
-                        )
-                    )
-                    .frame(width: 40, height: 40)
-                    .rotationEffect(Angle(degrees: isAnimating ? 360 : 0.0))
-                                        .animation(isAnimating ? animation : .default)
-                                        .onAppear { isAnimating = true }
-                                        .onDisappear { isAnimating = false }
-                
-                Text("Loading...")
-                    .foregroundColor(Color("text"))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 8)
-            }
-            .frame(width: bounds.width * 0.3, height: bounds.width * 0.3)
-            .background(Color("backgroundAccent"))
-            .cornerRadius(10)
+            
+            Circle()
+                .stroke(
+                    LinearGradient(gradient: gradient,
+                                   startPoint: .top,
+                                   endPoint: .bottom),
+                    style: StrokeStyle(lineWidth: 5,
+                                       lineCap: .round)
+                )
+                .frame(width: 40, height: 40)
+                .rotationEffect(Angle(degrees: isAnimating ? 360 : 0.0))
+                                    .animation(isAnimating ? animation : .default)
+                                    .onAppear { isAnimating = true }
+                                    .onDisappear { isAnimating = false }
+            
+            content
+            
         }
-        .frame(width: bounds.width, height: bounds.height)
-        .background(Color("background"))
     }
 }

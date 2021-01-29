@@ -1,5 +1,5 @@
 //
-//  ErrorView.swift
+//  HomeErrorView.swift
 //  TeltechEmployees
 //
 //  Created by Dominik Babić on 27/01/2021.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ErrorView: View {
+struct HomeErrorView: View {
     
     @State var action: () -> Void
     

@@ -21,29 +21,42 @@ struct EmployeeCardView: View {
         _cardWidth = State(initialValue: width)
     }
     
+    @ViewBuilder
     var body: some View {
-        VStack(alignment: .center) {
-            Image(uiImage: $viewModel.image.wrappedValue)
-                .resizable()
+        VStack(alignment: .center, spacing: 8) {
+            if $viewModel.isLoadingImage.wrappedValue {
+                LoadingView(gradient: Gradient(colors: [Color("backgroundImage"),
+                                                        Color.white])) {
+                    Text("Loading...")
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 8)
+                }
                 .frame(width: 128, height: 128, alignment: .center)
-                .aspectRatio(contentMode: .fit)
                 .background(Color("backgroundImage"))
                 .foregroundColor(Color("backgroundAccent"))
                 .clipShape(Circle())
                 .overlay(Circle().stroke(Color("backgroundImage"), lineWidth: 4))
-            VStack {
-                Text($viewModel.name.wrappedValue)
-                    .foregroundColor(Color("text"))
-                    .font(.title)
-                Text($viewModel.title.wrappedValue)
-                    .foregroundColor(Color("textAccent"))
-                    .font(.subheadline)
-                Text("\"\($viewModel.intro.wrappedValue)\"")
-                    .foregroundColor(Color("text"))
-                    .padding(.top, 16)
+            } else {
+                Image(uiImage: $viewModel.image.wrappedValue)
+                    .resizable()
+                    .frame(width: 128, height: 128, alignment: .center)
+                    .aspectRatio(contentMode: .fill)
+                    .background(Color("backgroundImage"))
+                    .foregroundColor(Color("backgroundAccent"))
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color("backgroundImage"), lineWidth: 4))
             }
-            .padding(.top, 16)
-            .padding(.bottom, 16)
+            
+            Text($viewModel.name.wrappedValue)
+                .foregroundColor(Color("text"))
+                .font(.title)
+            Text($viewModel.title.wrappedValue)
+                .foregroundColor(Color("textAccent"))
+                .font(.subheadline)
+            Text("\"\($viewModel.intro.wrappedValue)\"")
+                .foregroundColor(Color("text"))
+                .padding(.top, 16)
             
             NavigationLink(
                 destination: coordinator.scene(for: .home(route: .detail(employee: viewModel.employee))),

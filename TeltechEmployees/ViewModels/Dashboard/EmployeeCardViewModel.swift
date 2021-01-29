@@ -22,7 +22,8 @@ class EmployeeCardViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var intro: String = ""
     @Published var description: String = ""
-    @Published var image: UIImage = UIImage()
+    @Published var image: UIImage = UIImage(systemName: "person.circle.fill")?.withRenderingMode(.alwaysTemplate) ?? UIImage()
+    @Published var isLoadingImage = true
     
     init(with employee: Employee) {
         self.employee = employee
@@ -34,14 +35,12 @@ class EmployeeCardViewModel: ObservableObject {
         
         let publisher = requestManager.imagePublisher(for: employee.image)
         
-        publisher.sink(receiveCompletion: { _ in }, receiveValue: { [weak self] value in
-            var image = UIImage()
-            
-            if let receivedImage = value ?? UIImage(systemName: "person.circle.fill") {
-                image = receivedImage
+        publisher.sink(receiveCompletion: { [weak self] _ in
+            self?.isLoadingImage = false
+        }, receiveValue: { [weak self] value in
+            if let receivedImage = value {
+                self?.image = receivedImage
             }
-            
-            self?.image = image
         }).store(in: &cancellable)
     }
 }
