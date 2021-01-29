@@ -31,7 +31,7 @@ struct EmployeeDetailView: View {
                     
                     VStack(alignment: .leading, spacing: 8) {
                         HStack(alignment: .top) {
-                            Text("Name:")
+                            Text("name")
                                 .foregroundColor(Color("textAccent"))
                             
                             Text($viewModel.name.wrappedValue)
@@ -39,7 +39,7 @@ struct EmployeeDetailView: View {
                         }
                         
                         HStack(alignment: .top) {
-                            Text("Title:")
+                            Text("title")
                                 .foregroundColor(Color("textAccent"))
                             
                             Text($viewModel.title.wrappedValue)
@@ -59,7 +59,7 @@ struct EmployeeDetailView: View {
                     .padding(.top, 8)
                     .padding(.horizontal, 16)
                 
-                Text("Close")
+                Text("close")
                     .frame(width: bounds.width * 0.8, height: 50, alignment: .center)
                     .background(Color("backgroundAccent"))
                     .foregroundColor(Color("text"))
@@ -82,7 +82,7 @@ struct EmployeeDetailView: View {
         if $viewModel.isLoadingImage.wrappedValue {
             LoadingView(gradient: Gradient(colors: [Color("backgroundImage"),
                                                     Color.white])) {
-                Text("Loading...")
+                Text("loading")
                     .foregroundColor(Color.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 8)

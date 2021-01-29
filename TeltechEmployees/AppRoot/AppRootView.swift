@@ -21,7 +21,7 @@ struct AppRootView: View {
             ZStack {
                 coordinator.scene(for: $coordinator.entryPoint.wrappedValue)
                 
-                Text("No network connection.")
+                Text("no_network_connection")
                     .foregroundColor(Color.white)
                     .edgesIgnoringSafeArea(.horizontal)
                     .frame(width: bounds.width * 0.8, height: 32)

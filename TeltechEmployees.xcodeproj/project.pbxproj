@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D076E2E25C46C80008CB86A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D076E3025C46C80008CB86A /* Localizable.strings */; };
 		6D59080225C4285700CA4907 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59080125C4285700CA4907 /* LoadingView.swift */; };
 		6D5926FF25C014DB00F18DB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */; };
 		6D59270125C014DB00F18DB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59270025C014DB00F18DB7 /* SceneDelegate.swift */; };
 		6D59270525C014DB00F18DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270425C014DB00F18DB7 /* Assets.xcassets */; };
 		6D59270825C014DB00F18DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270725C014DB00F18DB7 /* Preview Assets.xcassets */; };
-		6D59270B25C014DB00F18DB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D59270925C014DB00F18DB7 /* LaunchScreen.storyboard */; };
 		6D59272125C014DB00F18DB7 /* TeltechEmployeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D59272025C014DB00F18DB7 /* TeltechEmployeesUITests.swift */; };
 		6D60668A25C1432200D7074E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60668925C1432200D7074E /* HomeView.swift */; };
 		6D60668F25C1434B00D7074E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D60668E25C1434B00D7074E /* HomeViewModel.swift */; };
@@ -64,13 +64,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D076E2F25C46C80008CB86A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6D076E3325C46C88008CB86A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6D59080125C4285700CA4907 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6D5926FB25C014DB00F18DB7 /* TeltechEmployees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeltechEmployees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D59270025C014DB00F18DB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D59270425C014DB00F18DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D59270725C014DB00F18DB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		6D59270A25C014DB00F18DB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D59270C25C014DB00F18DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D59271125C014DB00F18DB7 /* TeltechEmployeesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeltechEmployeesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D59271725C014DB00F18DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,9 +153,9 @@
 				6D5926FE25C014DB00F18DB7 /* AppDelegate.swift */,
 				6D59270025C014DB00F18DB7 /* SceneDelegate.swift */,
 				6D59270425C014DB00F18DB7 /* Assets.xcassets */,
-				6D59270925C014DB00F18DB7 /* LaunchScreen.storyboard */,
 				6D59270C25C014DB00F18DB7 /* Info.plist */,
 				6D59270625C014DB00F18DB7 /* Preview Content */,
+				6D076E3025C46C80008CB86A /* Localizable.strings */,
 			);
 			path = TeltechEmployees;
 			sourceTree = "<group>";
@@ -361,6 +362,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 6D5926F225C014DB00F18DB7;
 			productRefGroup = 6D5926FC25C014DB00F18DB7 /* Products */;
@@ -379,8 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D59270B25C014DB00F18DB7 /* LaunchScreen.storyboard in Resources */,
 				6D59270825C014DB00F18DB7 /* Preview Assets.xcassets in Resources */,
+				6D076E2E25C46C80008CB86A /* Localizable.strings in Resources */,
 				6D59270525C014DB00F18DB7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,12 +459,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D59270925C014DB00F18DB7 /* LaunchScreen.storyboard */ = {
+		6D076E3025C46C80008CB86A /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6D59270A25C014DB00F18DB7 /* Base */,
+				6D076E2F25C46C80008CB86A /* en */,
+				6D076E3325C46C88008CB86A /* de */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

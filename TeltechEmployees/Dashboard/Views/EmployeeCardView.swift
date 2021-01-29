@@ -27,7 +27,7 @@ struct EmployeeCardView: View {
             if $viewModel.isLoadingImage.wrappedValue {
                 LoadingView(gradient: Gradient(colors: [Color("backgroundImage"),
                                                         Color.white])) {
-                    Text("Loading...")
+                    Text("loading")
                         .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 8)
@@ -61,7 +61,7 @@ struct EmployeeCardView: View {
             NavigationLink(
                 destination: coordinator.scene(for: .home(route: .detail(employee: viewModel.employee))),
                 label: {
-                    Text("See more")
+                    Text("see_more")
                         .foregroundColor(Color("textAccent"))
                 })
         }

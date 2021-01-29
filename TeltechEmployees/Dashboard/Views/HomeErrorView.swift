@@ -20,7 +20,7 @@ struct HomeErrorView: View {
         VStack {
             Spacer()
             
-            Text("Something went wrong. Please try again.")
+            Text("something_went_wrong")
             
             Image(systemName: "arrow.counterclockwise.circle.fill")
                 .resizable()

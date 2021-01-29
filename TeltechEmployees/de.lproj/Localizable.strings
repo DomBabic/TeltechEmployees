@@ -1,0 +1,19 @@
+/* 
+  Localizations.strings
+  TeltechEmployees
+
+  Created by Dominik Babić on 29/01/2021.
+  
+*/
+
+"employees" = "Angestellte";
+"no_network_connection" = "Keine Netzwerkverbingung";
+"loading" = "Wird geladen...";
+"name" = "Name";
+"title" = "Titel";
+"close" = "Schließen";
+"something_went_wrong" = "Etwas ist schiefgelaufen, Bitte versuchen Sie es noch einmal";
+"enter_username" = "Geben Sie Ihren Nutzernamen ein...";
+"enter_password" = "Geben Sie Ihr Passwort ein...";
+"log_in" = "Einloggen";
+"see_more" = "Erfahren Sie mehr";

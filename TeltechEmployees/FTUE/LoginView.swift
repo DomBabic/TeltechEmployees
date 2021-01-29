@@ -20,17 +20,17 @@ struct LoginView: View {
             
             Spacer()
             
-            Text("Employee app").font(.title).foregroundColor(Color("text"))
+            Text("employees").font(.title).foregroundColor(Color("text"))
             
             Spacer()
             
             VStack(alignment: .center, spacing: 16) {
-                TextField("Enter username...", text: $username)
+                TextField("enter_username", text: $username)
                     .foregroundColor(Color("text"))
                     .multilineTextAlignment(.center)
                     .textFieldStyle(AccentedTextFieldStyle())
                     
-                SecureField("Enter password...", text: $password)
+                SecureField("enter_password", text: $password)
                     .foregroundColor(Color("text"))
                     .multilineTextAlignment(.center)
                     .textFieldStyle(AccentedTextFieldStyle())
@@ -39,7 +39,7 @@ struct LoginView: View {
             
             Spacer()
             
-            Text("Log in")
+            Text("log_in")
                 .frame(width: 150, height: 50, alignment: .center)
                 .background(Color("backgroundAccent"))
                 .cornerRadius(25)

@@ -24,7 +24,7 @@ struct HomeLoadingView: View {
             LoadingView(gradient: Gradient(colors: [Color("backgroundAccent"),
                                                     Color("textAccent"),
                                                     Color("text")])) {
-                Text("Loading...")
+                Text("loading")
                     .foregroundColor(Color("text"))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 8)
