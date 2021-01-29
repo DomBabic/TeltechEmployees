@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 public extension URLSession {
     
@@ -37,6 +38,35 @@ public extension URLSession {
                 return element.data
             }
             .decode(type: T.self, decoder: decoder)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
+    
+    /**
+        Convenience method for constructing Publisher which performs data tasks. Used for async loading of image data.
+     
+        - Parameters:
+            - url: URL object for which data task is performed.
+            - onReceive: Escaping closure used to handle received output events.
+     
+        - Returns:
+            AnyPublisher object which performs data task and emits Result.
+     
+        - Tag: imagePublisher
+     */
+    func imagePublisher(for url: URL, onReceive: @escaping (UIImage?) -> ()) -> AnyPublisher<UIImage?, Error> {
+        dataTaskPublisher(for: url)
+            .tryMap() { element -> UIImage? in
+                guard let response = element.response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                
+                return UIImage(data: element.data)
+            }
+            .handleEvents(receiveOutput: {
+                onReceive($0)
+            })
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

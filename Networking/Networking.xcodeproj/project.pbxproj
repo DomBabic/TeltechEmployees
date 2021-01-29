@@ -15,6 +15,7 @@
 		6D6BB43225C0542F000E668C /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB43025C0542F000E668C /* Employee.swift */; };
 		6D6BB43A25C0546C000E668C /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB43925C0546C000E668C /* RequestManagerTests.swift */; };
 		6D6BB43E25C05477000E668C /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D6BB43D25C05477000E668C /* EndpointTests.swift */; };
+		6DAA5C8425C3F9DC008CA235 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAA5C8325C3F9DC008CA235 /* ImageCacheManager.swift */; };
 		6DB2993525C2E55100B71474 /* NetworkStatusMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB2993425C2E55100B71474 /* NetworkStatusMonitor.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		6D6BB43025C0542F000E668C /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		6D6BB43925C0546C000E668C /* RequestManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		6D6BB43D25C05477000E668C /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
+		6DAA5C8325C3F9DC008CA235 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		6DB2993425C2E55100B71474 /* NetworkStatusMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,8 +132,9 @@
 		6D6BB42525C053F6000E668C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6D6BB42B25C05425000E668C /* RequestManager.swift */,
+				6DAA5C8325C3F9DC008CA235 /* ImageCacheManager.swift */,
 				6DB2993425C2E55100B71474 /* NetworkStatusMonitor.swift */,
+				6D6BB42B25C05425000E668C /* RequestManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				6D6BB42825C0541E000E668C /* URLSession+Publisher.swift in Sources */,
 				6D6BB43225C0542F000E668C /* Employee.swift in Sources */,
+				6DAA5C8425C3F9DC008CA235 /* ImageCacheManager.swift in Sources */,
 				6D6BB43125C0542F000E668C /* Endpoint.swift in Sources */,
 				6DB2993525C2E55100B71474 /* NetworkStatusMonitor.swift in Sources */,
 				6D6BB42C25C05425000E668C /* RequestManager.swift in Sources */,

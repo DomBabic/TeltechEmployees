@@ -105,4 +105,19 @@ public extension Endpoint {
         
         return Endpoint(path: "/api", queryItems: queryItems)
     }
+    
+    /**
+        Method providing convenient way of generating Endpoint object with URL pointing to images/members endpoint.
+     
+        - Parameters:
+            - name: String. Defines resource name to be joined with postfix -main.jpg.
+     
+        - Returns:
+            Endpoint object with path set to "/images/members/{name}-main.jpg".
+     
+        - Tag: imageEndpoint
+     */
+    static func image(with name: String) -> Endpoint {
+        return Endpoint(path: "/images/members/\(name)-main.jpg", queryItems: [])
+    }
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import UIKit
 
 /**
     Manager class responsible for constructing data task publishers.
@@ -27,6 +28,8 @@ public class RequestManager {
      */
     public static var shared = RequestManager()
     
+    private var imageCache = ImageCacheManager.shared
+    
     /**
         Method used to construct data task publisher.
      
@@ -42,6 +45,38 @@ public class RequestManager {
     public func employeePublisher() -> AnyPublisher<[Employee], Error> {
         let endpoint = Endpoint.employees()
         return publisher(for: endpoint, with: [Employee].self)
+    }
+    
+    /**
+        Method used to construct data task publisher.
+     
+        Constructed publisher performs data task on [image endpoint](x-source-tag://imageEndpoint),
+        received response is then mapped to UIImage object and cached.
+        If cache contains image for imageName key, cached object will be fetched instead.
+        in case of a failure an error will be thrown.
+     
+        - Parameters:
+            - imageName: String used to construct resource location.
+     
+        - Returns:
+            Publisher which expects to receive a UIImage object in response.
+     
+        - Tag: imagePublisherForImageName
+     */
+    public func imagePublisher(for imageName: String) -> AnyPublisher<UIImage?, Error> {
+        if let image = imageCache[imageName] {
+            return AnyPublisher(Result<UIImage?, Error>.Publisher(image))
+        }
+        
+        guard let url = Endpoint.image(with: imageName).url else {
+            return AnyPublisher(Result<UIImage?, Error>.Publisher(URLError(.badURL)))
+        }
+        
+        let publisher = session.imagePublisher(for: url, onReceive: { [weak self] in
+            self?.imageCache[imageName] = $0
+        })
+        
+        return publisher
     }
     
     /**
